@@ -20,6 +20,27 @@ const config: Config = {
       },
       backgroundColor: {
         pizza_yellow: '#FDC913',
+        pizza_gray: '#5F5F5F',
+        pizza_red: '#CE2829',
+      },
+      colors: {
+        pizza_yellow: '#FDC913',
+        pizza_gray: '#5F5F5F',
+      },
+      width: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '2/3': '66.666667%',
+        '3/4': '75%',
+        full: '100%',
+      },
+      maxWidth: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        full: '100%',
+        '2/3': '66.666667%',
+        pizza: '50%',
       },
     },
   },
