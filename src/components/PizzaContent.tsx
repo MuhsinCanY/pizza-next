@@ -4,8 +4,8 @@ const PizzaContent = () => {
   return (
     <div className="text-black flex flex-col gap-4 py-8">
       <h1 className="font-bold text-3xl">Position Absolute Acı Pizza</h1>
-      <div className="flex justify-between">
-        <h1>85.50₺</h1>
+      <div className="flex justify-between items-center my-8">
+        <h1 className="font-bold text-3xl">85.50₺</h1>
         <h1 className="font-light text-[#5F5F5F]">4.9</h1>
         <h1 className="font-light text-[#5F5F5F]">(200)</h1>
       </div>

@@ -4,10 +4,12 @@ import PizzaHeader from '@/components/PizzaHeader'
 import PizzaPaste from '@/components/PizzaPaste'
 import PizzaContent from '@/components/PizzaContent'
 import { useForm } from 'react-hook-form'
+import PizzaMaterials from '@/components/PizzaMaterials'
 
 export interface FormValues {
   size: string
   paste: string
+  materials: string[]
 }
 
 export default function Pizza() {
@@ -26,11 +28,11 @@ export default function Pizza() {
         <div className="container max-w-pizza">
           <PizzaContent />
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="flex  justify-between ">
+            <div className="flex justify-between ">
               <PizzaSize errors={errors} register={register} />
               <PizzaPaste errors={errors} register={register} />
             </div>
-
+            <PizzaMaterials errors={errors} register={register} />
             <input
               className="bg-pizza_yellow text-black py-2 px-4 rounded-lg hover:bg-amber-400 hover:text-white"
               type="submit"

@@ -7,7 +7,7 @@ const PizzaSize = ({ errors, register }: { errors: any; register: any }) => {
         Boyut Seç <span className="text-red-400">*</span>
       </label>
       {errors.size && (
-        <span className="text-red-500">This field is required</span>
+        <span className="text-red-500">Lütfen pizza boyutunu seçiniz.</span>
       )}
       <label>
         <input

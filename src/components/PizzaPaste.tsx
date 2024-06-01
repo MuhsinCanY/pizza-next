@@ -7,7 +7,7 @@ const PizzaPaste = ({ errors, register }: { errors: any; register: any }) => {
         Hamur Seç <span className="text-red-500">*</span>
       </label>
       {errors.paste && (
-        <span className="text-red-500">This field is required</span>
+        <span className="text-red-500">Lütfen hamur kalınlığını seçiniz.</span>
       )}
       <select
         className="bg-white text-black p-1 rounded-lg border-2 border-black"
