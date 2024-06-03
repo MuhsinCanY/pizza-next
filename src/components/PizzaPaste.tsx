@@ -2,8 +2,8 @@ import React from 'react'
 
 const PizzaPaste = ({ errors, register }: { errors: any; register: any }) => {
   return (
-    <div className="paste flex gap-4 flex-col p-4">
-      <label className="text-black font-semibold text-lg">
+    <div className="paste flex gap-4 flex-col py-4">
+      <label className="text-black font-semibold text-2xl">
         Hamur Seç <span className="text-red-500">*</span>
       </label>
       {errors.paste && (

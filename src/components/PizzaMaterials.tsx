@@ -1,3 +1,4 @@
+import { get } from 'http'
 import React from 'react'
 
 const materials = [
@@ -25,7 +26,7 @@ const PizzaMaterials = ({
 }) => {
   return (
     <div className="text-black flex flex-col gap-4 py-8">
-      <h1 className="font-bold text-2xl">Ek Malzemeler</h1>
+      <h1 className="font-semibold text-2xl">Ek Malzemeler</h1>
       <p className="font-normal">En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
       {errors.materials && errors.materials.type === 'biggerThan' && (
         <span className="text-red-500">
@@ -47,8 +48,8 @@ const PizzaMaterials = ({
               value={item}
               {...register('materials', {
                 validate: {
-                  biggerThan: (v: string[]) => v.length > 4,
-                  lessThan: (v: string[]) => v.length < 10,
+                  biggerThan: (v: string[]) => v.length >= 4,
+                  lessThan: (v: string[]) => v.length <= 10,
                 },
               })}
             />

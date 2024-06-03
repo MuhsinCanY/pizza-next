@@ -3,7 +3,7 @@ import React from 'react'
 const PizzaSize = ({ errors, register }: { errors: any; register: any }) => {
   return (
     <div className="size text-pizza_gray text-base flex gap-4 flex-col py-4">
-      <label className="text-black font-semibold text-lg">
+      <label className="text-black font-semibold text-2xl">
         Boyut Seç <span className="text-red-400">*</span>
       </label>
       {errors.size && (
