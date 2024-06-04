@@ -1,4 +1,5 @@
 import './globals.css'
+import { Provider } from './provider'
 
 export const metadata = {
   title: 'Next.js',
@@ -13,7 +14,9 @@ export default function RootLayout({
   return (
     // Some Extentions couse an error an this is why we need to suppress the warning.
     <html suppressHydrationWarning={true} lang="en">
-      <body suppressHydrationWarning={true}>{children}</body>
+      <body suppressHydrationWarning={true}>
+        <Provider>{children}</Provider>
+      </body>
     </html>
   )
 }

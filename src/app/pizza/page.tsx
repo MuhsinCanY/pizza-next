@@ -6,9 +6,11 @@ import PizzaContent from '@/components/PizzaContent'
 import { useForm } from 'react-hook-form'
 import PizzaMaterials from '@/components/PizzaMaterials'
 import PizzaNote from '@/components/PizzaNote'
-import { use, useState } from 'react'
+import { useState } from 'react'
 import PizzaCount from '@/components/PizzaCount'
 import PizzaResult from '@/components/PizzaResult'
+import { useRouter } from 'next/navigation'
+import { useFormData } from '../provider'
 
 export interface FormValues {
   size: string
@@ -17,23 +19,21 @@ export interface FormValues {
 }
 
 export default function Pizza() {
+  const [pizzaCount, setPizzaCount] = useState(1)
+  const router = useRouter()
+  const { setFormData } = useFormData()
+
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors, isValid },
   } = useForm<FormValues>()
+
   const onSubmit = (data: FormValues) => {
-    console.log(data)
-    console.log(errors)
-    console.log(watch('materials'))
-
-    //TODO: Request
+    router.push('/success')
+    setFormData({ ...data, count: pizzaCount })
   }
-
-  //TODO: delete console.logs
-
-  const [pizzaCount, setPizzaCount] = useState(1)
 
   return (
     <>
@@ -57,14 +57,9 @@ export default function Pizza() {
               <PizzaResult
                 pizzaCount={pizzaCount}
                 watch={watch}
-                errors={errors}
                 isValid={isValid}
               />
             </div>
-            {/* <input
-              className="bg-pizza_yellow text-black py-2 px-4 rounded-lg hover:bg-amber-400 hover:text-white"
-              type="submit"
-            /> */}
           </form>
         </div>
       </div>
