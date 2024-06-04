@@ -14,7 +14,7 @@ const PizzaSize = ({ errors, register }: { errors: any; register: any }) => {
           className="mr-2"
           {...register('size', { required: true })}
           type="radio"
-          value="Küçük"
+          value="small"
         />
         Küçük
       </label>
@@ -23,7 +23,7 @@ const PizzaSize = ({ errors, register }: { errors: any; register: any }) => {
           className="mr-2"
           {...register('size', { required: true })}
           type="radio"
-          value="Orta"
+          value="middle"
         />
         Orta
       </label>
@@ -32,7 +32,7 @@ const PizzaSize = ({ errors, register }: { errors: any; register: any }) => {
           className="mr-2"
           {...register('size', { required: true })}
           type="radio"
-          value="Büyük"
+          value="big"
         />
         Büyük
       </label>

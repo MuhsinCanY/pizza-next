@@ -1,15 +1,13 @@
-import { error } from 'console'
+import Link from 'next/link'
 import React, { useEffect } from 'react'
 
 const PizzaResult = ({
   pizzaCount,
   watch,
-  errors,
   isValid,
 }: {
   pizzaCount: number
   watch: any
-  errors: any
   isValid: boolean
 }) => {
   const materials = watch('materials') ? watch('materials').length : 0
