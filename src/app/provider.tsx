@@ -17,3 +17,8 @@ export function Provider({ children }: { children: React.ReactNode }) {
 export function useFormData() {
   return useContext(FormDataContext)
 }
+
+export interface FormDataContextProps {
+  formData: any
+  setFormData: any
+}

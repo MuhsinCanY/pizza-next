@@ -1,10 +1,9 @@
 'use client'
-import { useSearchParams } from 'next/navigation'
 import React, { useEffect } from 'react'
 import { useFormData } from '../provider'
 
 export default function Success() {
-  const { formData } = useFormData()
+  const { formData }: { formData: any } = useFormData()
 
   useEffect(() => {
     console.log(formData)

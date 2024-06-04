@@ -21,7 +21,7 @@ export interface FormValues {
 export default function Pizza() {
   const [pizzaCount, setPizzaCount] = useState(1)
   const router = useRouter()
-  const { setFormData } = useFormData()
+  const { setFormData }: { setFormData: any } = useFormData()
 
   const {
     register,
