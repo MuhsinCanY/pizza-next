@@ -1,8 +1,16 @@
 'use client'
-import { useContext, useState } from 'react'
+import { Dispatch, SetStateAction, useContext, useState } from 'react'
 import { createContext } from 'react'
 
-const FormDataContext = createContext({})
+export interface FormDataContextProps {
+  formData: any
+  setFormData: Dispatch<SetStateAction<any>>
+}
+
+const FormDataContext = createContext<FormDataContextProps>({
+  formData: {},
+  setFormData: () => {},
+})
 
 export function Provider({ children }: { children: React.ReactNode }) {
   const [formData, setFormData] = useState()
@@ -16,9 +24,4 @@ export function Provider({ children }: { children: React.ReactNode }) {
 
 export function useFormData() {
   return useContext(FormDataContext)
-}
-
-export interface FormDataContextProps {
-  formData: any
-  setFormData: any
 }
