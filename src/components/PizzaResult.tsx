@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import React, { useEffect } from 'react'
+import { pizzaPrices } from '@/app/pizza'
+import React from 'react'
 
 const PizzaResult = ({
   pizzaCount,
@@ -13,7 +13,7 @@ const PizzaResult = ({
   const materials = watch('materials') ? watch('materials').length : 0
 
   return (
-    <div className="text-black w-[350px] border-[1px] pt-2 rounded-xl text-lg flex flex-col gap-4">
+    <div className="text-black w-80 border-[1px] pt-2 rounded-xl text-lg flex flex-col gap-4">
       <div className="p-6 pb-4 flex flex-col gap-3">
         <h1 className="text-xl">Sipariş Toplamı</h1>
         <div className="flex justify-between text-lg text-[#5F5F5F]">
@@ -22,7 +22,10 @@ const PizzaResult = ({
         </div>
         <div className="text-[#CE2829] flex justify-between text-lg">
           <p>Toplam</p>
-          <p>{pizzaCount * 85 + materials * 5}.00₺</p>
+          <p>
+            {pizzaCount * pizzaPrices.pizza + materials * pizzaPrices.material}
+            .00₺
+          </p>
         </div>
       </div>
       <button

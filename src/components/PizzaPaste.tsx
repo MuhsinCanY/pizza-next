@@ -16,9 +16,9 @@ const PizzaPaste = ({ errors, register }: { errors: any; register: any }) => {
         <option value="" className="hidden">
           Hamur Kalınlığı
         </option>
-        <option value="slim">İnce</option>
-        <option value="normal">Normal</option>
-        <option value="thick">Kalın</option>
+        <option value="İnce">İnce</option>
+        <option value="Normal">Normal</option>
+        <option value="Kalın">Kalın</option>
       </select>
     </div>
   )

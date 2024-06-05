@@ -1,4 +1,3 @@
-import { get } from 'http'
 import React from 'react'
 
 const materials = [
@@ -40,20 +39,22 @@ const PizzaMaterials = ({
       )}
       <div className="flex flex-wrap gap-2">
         {materials.map((item, index) => (
-          <div className="flex items-center w-40 gap-3" key={index}>
-            <input
-              className="size-5"
-              type="checkbox"
-              id={item}
-              value={item}
-              {...register('materials', {
-                validate: {
-                  biggerThan: (v: string[]) => v.length >= 4,
-                  lessThan: (v: string[]) => v.length <= 10,
-                },
-              })}
-            />
-            <label>{item}</label>
+          <div className="flex items-center w-40" key={index}>
+            <label className="flex items-center gap-3">
+              <input
+                className="size-5"
+                type="checkbox"
+                id={item}
+                value={item}
+                {...register('materials', {
+                  validate: {
+                    biggerThan: (v: string[]) => v.length >= 4,
+                    lessThan: (v: string[]) => v.length <= 10,
+                  },
+                })}
+              />
+              {item}
+            </label>
           </div>
         ))}
       </div>

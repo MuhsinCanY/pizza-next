@@ -5,7 +5,7 @@ const PizzaHeader = () => {
   return (
     <div className="bg-pizza_red flex items-center justify-center pt-10">
       <div className="container  max-w-pizza ">
-        <h1 className="font-roboto font-semibold text-[42px] text-white text-center">
+        <h1 className="font-roboto font-semibold text-4xl text-white text-center">
           Teknolojik Yemekler
         </h1>
         <h2 className="py-6 font-barlow text-base font-light text-white">
