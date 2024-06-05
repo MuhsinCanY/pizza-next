@@ -3,6 +3,7 @@ import React, { use } from 'react'
 import { useFormData } from '../provider'
 import { calculateMaterialsPrice, calculateTotalPrice } from '../pizza'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 export default function Success() {
   const router = useRouter()
@@ -49,6 +50,9 @@ export default function Success() {
             <p>{calculateTotalPrice(formData.count, formData.materials)}.00₺</p>
           </div>
         </div>
+        <Link className="text-white mt-4" href="/">
+          Ana Sayfa
+        </Link>
       </div>
     </div>
   )
