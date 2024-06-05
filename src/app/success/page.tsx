@@ -1,12 +1,15 @@
 'use client'
-import React from 'react'
+import React, { use } from 'react'
 import { useFormData } from '../provider'
 import { calculateMaterialsPrice, calculateTotalPrice } from '../pizza'
+import { useRouter } from 'next/navigation'
 
 export default function Success() {
+  const router = useRouter()
   const { formData }: { formData: any } = useFormData()
 
   if (!formData) {
+    router.push('/')
     return null
   }
 
