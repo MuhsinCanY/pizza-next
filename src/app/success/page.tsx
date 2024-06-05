@@ -6,6 +6,10 @@ import { calculateMaterialsPrice, calculateTotalPrice } from '../pizza'
 export default function Success() {
   const { formData }: { formData: any } = useFormData()
 
+  if (!formData) {
+    return null
+  }
+
   return (
     <div className="font-barlow bg-pizza_red h-screen w-full flex flex-col justify-center items-center">
       <div className="max-w-pizza container flex items-center flex-col gap-10">
