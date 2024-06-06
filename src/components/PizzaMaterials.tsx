@@ -42,6 +42,7 @@ const PizzaMaterials = ({
           <div className="flex items-center w-40" key={index}>
             <label className="flex items-center gap-3">
               <input
+                data-testid={'materials-' + index}
                 className="size-5"
                 type="checkbox"
                 id={item}

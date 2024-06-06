@@ -5,6 +5,7 @@ const PizzaNote = ({ register }: { register: any }) => {
     <div className="flex flex-col gap-4 py-4">
       <h1 className="font-semibold text-2xl text-black">Sipariş Notu</h1>
       <input
+        data-testid="pizza-note"
         className="bg-white text-gray-900 p-4 rounded-lg border-2 border-black"
         type="text"
         placeholder="Siparişine eklemek istediğin bir not var mı?"

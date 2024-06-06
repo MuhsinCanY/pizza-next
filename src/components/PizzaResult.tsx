@@ -29,6 +29,7 @@ const PizzaResult = ({
         </div>
       </div>
       <button
+        data-testid="pizza-submit"
         className={
           isValid
             ? 'bg-pizza_yellow p-4 w-full rounded-b-lg text-xl'
